@@ -1,25 +1,25 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Demo Proyecto, sitio de demostración sobre diseño y desarrollo web.">
-  <title>Inicio | Demo Proyecto</title>
-  <!-- Primero Bootstrap, después los estilos del proyecto. -->
+  <meta name="description" content="Netflix: del alquiler de DVD por correo al streaming. Proyecto de Digitalización, 2º DAM.">
+  <title>Inicio | Netflix: del DVD al streaming</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23141414'/%3E%3Cpath d='M9 5h5l4 12V5h5v22h-5l-4-12v12H9z' fill='%23e50914'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add("js");</script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
         crossorigin="anonymous">
+  <link rel="stylesheet" href="css/scrollcraft.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/escenas.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- Navegación común. Bootstrap controla el menú plegable en móviles. -->
   <nav class="navbar navbar-expand-md fixed-top site-nav" aria-label="Navegación principal">
     <div class="container">
-      <a class="navbar-brand brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true"></span> Demo Proyecto
-      </a>
+      <a class="navbar-brand brand" href="index.html">Netflix</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
               aria-expanded="false" aria-label="Mostrar u ocultar la navegación">
@@ -28,83 +28,142 @@
       <div class="collapse navbar-collapse" id="menuPrincipal">
         <ul class="navbar-nav ms-auto gap-md-2">
           <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="empresa.html">Empresa</a></li>
+          <li class="nav-item"><a class="nav-link" href="evolucion.html">Evolución</a></li>
+          <li class="nav-item"><a class="nav-link" href="recursos.html">Recursos</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <main id="contenido" tabindex="-1">
-    <!-- Hero con dos columnas a partir de pantallas grandes. -->
-    <section class="hero" aria-labelledby="titulo-inicio">
-      <div class="container">
-        <div class="row align-items-center g-4 g-lg-5">
-          <div class="col-lg-6">
-            <h1 id="titulo-inicio" class="hero-title">Diseñamos webs <span>fáciles de usar.</span></h1>
-            <p class="intro mt-4 mb-4">
-              Creamos sitios claros, accesibles y adaptados a cada pantalla.
-            </p>
-            <a class="btn btn-accent btn-lg" href="servicios.html">
-              Explorar servicios <span aria-hidden="true">→</span>
-            </a>
+    <section class="sobre" data-sc-act="pin" data-sc-span="2.4" aria-labelledby="titulo-inicio">
+      <div data-sc-stage class="sobre-stage">
+        <div class="sobre-pantalla" data-sc-parallax="-0.8">
+          <figure>
+            <img src="img/ilustracion-streaming.jpg" width="1200" height="790"
+                 alt="Ilustración de Netflix con pantallas y los iconos de reproducir, buscar, valorar y compartir">
+          </figure>
+        </div>
+        <div class="sobre-mitad sobre-mitad--izq" aria-hidden="true"><img src="img/sobres-rojos.jpg" width="1200" height="910" alt=""></div>
+        <div class="sobre-mitad sobre-mitad--der" aria-hidden="true"><img src="img/sobres-rojos.jpg" width="1200" height="910" alt=""></div>
+        <div class="sobre-scrim" aria-hidden="true"></div>
+
+        <p class="sobre-medidor" aria-live="off">
+          <span data-sc-cue="0 0.4 0">Por correo · <b>2–3 días</b></span>
+          <span data-sc-cue="0.45 1 0.2 0.05">Streaming · <b>10–15 s</b></span>
+        </p>
+
+        <div class="sobre-copy" data-sc-cue="0 0.5 0">
+          <h1 id="titulo-inicio" class="hero-title">Del DVD al <span>streaming.</span></h1>
+          <p class="intro mt-3 mb-4">De sobres rojos por correo a más de 190 países en segundos.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-netflix btn-lg" href="evolucion.html">Ver la evolución <span aria-hidden="true">→</span></a>
+            <a class="btn btn-outline-claro btn-lg" href="empresa.html">La empresa</a>
           </div>
-          <div class="col-lg-6">
-            <!-- Sustituye la imagen de ejemplo y actualiza su texto alternativo. -->
-            <div class="hero-media">
-              <img src="img/estudio-demo.jpg" width="1280" height="854" class="img-fluid"
-                   alt="Pasillo de un estudio con salas acristaladas">
+        </div>
+
+        <div class="sobre-copy" data-sc-cue="0.55 1 0.25 0.05">
+          <p class="pregunta">¿Cómo cambió el negocio al pasar del alquiler de DVD por correo al streaming?</p>
+        </div>
+
+        <p class="sobre-pie leyenda"><strong>Fig. 3.</strong> Sobres rojos de los DVD. Fuente: Netflix, Thanks for Watching (2023). <strong>Fig. 8.</strong> Acciones del streaming. Fuente: Netflix (2012).</p>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-pista">
+        <span><b>1998</b> Tienda online</span><span><b>1999</b> Suscripción</span><span><b>2007</b> Streaming</span><span><b>2011</b> Open Connect</span><span><b>2016</b> 190 países</span><span><b>2016</b> Descargas</span><span><b>2022</b> Anuncios</span>
+        <span><b>1998</b> Tienda online</span><span><b>1999</b> Suscripción</span><span><b>2007</b> Streaming</span><span><b>2011</b> Open Connect</span><span><b>2016</b> 190 países</span><span><b>2016</b> Descargas</span><span><b>2022</b> Anuncios</span>
+      </div>
+    </div>
+
+    <section class="section-space" aria-labelledby="titulo-cifras">
+      <div class="container">
+        <h2 id="titulo-cifras" class="section-title reveal">Netflix en cifras</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 g-lg-4">
+          <div class="col reveal">
+            <div class="tarjeta">
+              <span class="cifra">1998</span>
+              <p class="cifra-texto">Primera tienda online de alquiler de DVD.</p>
+            </div>
+          </div>
+          <div class="col reveal" style="--d: .08s">
+            <div class="tarjeta">
+              <span class="cifra" data-count="190" data-prefix="+">+190</span>
+              <p class="cifra-texto">Países con Netflix desde 2016.</p>
+            </div>
+          </div>
+          <div class="col reveal" style="--d: .16s">
+            <div class="tarjeta">
+              <span class="cifra" data-count="325" data-prefix="+" data-suffix=" M">+325 M</span>
+              <p class="cifra-texto">Suscripciones de pago (4.º trim. 2025).</p>
+            </div>
+          </div>
+          <div class="col reveal" style="--d: .24s">
+            <div class="tarjeta">
+              <span class="cifra" data-count="45200" data-suffix=" M$">45.200 M$</span>
+              <p class="cifra-texto">Ingresos en 2025, +16 % que en 2024.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Una columna en móvil y tres a partir del breakpoint md. -->
-    <section class="section-space" aria-labelledby="titulo-areas">
+    <section class="section-space section-alt" aria-labelledby="titulo-dossier">
       <div class="container">
-        <h2 id="titulo-areas" class="section-title mb-4">Qué hacemos</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-3 g-lg-4">
-          <div class="col">
-            <article class="card service-card h-100">
-              <div class="card-body p-4">
-                <h3 class="h5 fw-bold">Diseño de interfaces</h3>
-                <p class="mb-0">Damos forma a pantallas que ayudan a encontrar la información y completar tareas.</p>
-              </div>
+        <h2 id="titulo-dossier" class="section-title reveal">Explora</h2>
+        <div class="puertas">
+          <div class="puerta puerta-1 reveal">
+            <article class="tarjeta">
+              <div class="marco" data-sc-tilt="5"><img src="img/simbolo-n.jpg" width="480" height="300" alt="Símbolo actual de Netflix, la N roja"></div>
+              <h3>La empresa</h3>
+              <p>Ficha, directivos, áreas y presencia en el mundo.</p>
+              <a class="tarjeta-link" href="empresa.html">Entrar <span aria-hidden="true">→</span></a>
             </article>
           </div>
-          <div class="col">
-            <article class="card service-card h-100">
-              <div class="card-body p-4">
-                <h3 class="h5 fw-bold">Desarrollo web</h3>
-                <p class="mb-0">Convertimos el diseño en páginas que se adaptan a móviles, tablets y ordenadores.</p>
-              </div>
+          <div class="puerta puerta-2 reveal" style="--d: .08s">
+            <article class="tarjeta">
+              <div class="marco" data-sc-tilt="5"><img src="img/open-connect.jpg" width="936" height="622" alt="Globo terráqueo con los servidores de Open Connect marcados en rojo"></div>
+              <h3>Evolución</h3>
+              <p>Antes y después del streaming y los 7 hitos en una línea temporal.</p>
+              <a class="tarjeta-link" href="evolucion.html">Entrar <span aria-hidden="true">→</span></a>
             </article>
           </div>
-          <div class="col">
-            <article class="card service-card h-100">
-              <div class="card-body p-4">
-                <h3 class="h5 fw-bold">Accesibilidad</h3>
-                <p class="mb-0">Revisamos la legibilidad, los contrastes y la navegación con teclado.</p>
-              </div>
+          <div class="puerta puerta-3 reveal" style="--d: .16s">
+            <article class="tarjeta">
+              <div class="marco" data-sc-tilt="5"><img src="img/ces-2016.jpg" width="480" height="320" alt="Escenario del CES 2016 con el lema #netflixeverywhere"></div>
+              <h3>Recursos</h3>
+              <p>Vídeo oficial, galería de figuras, fuentes y conclusión.</p>
+              <a class="tarjeta-link" href="recursos.html">Entrar <span aria-hidden="true">→</span></a>
             </article>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section-space" aria-label="Dato curioso">
+      <div class="container">
+        <aside class="dato-curioso reveal zoom" aria-labelledby="titulo-curioso-inicio">
+          <h3 id="titulo-curioso-inicio">Dato curioso</h3>
+          <p>En 1998 la web ya recomendaba películas según tus compras anteriores. Las recomendaciones llegaron antes que el streaming.</p>
+        </aside>
+      </div>
+    </section>
   </main>
 
-  <!-- Pie común a las tres páginas. -->
   <footer class="site-footer mt-auto">
     <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
-      <span class="fw-semibold">Demo Proyecto</span>
-      <small>Sitio de demostración</small>
+      <span class="brand">Netflix</span>
+      <small>Luis Cristian Sanchez Oliva · 2º DAM Tarde · Digitalización · Datos de fuentes oficiales de Netflix</small>
     </div>
   </footer>
 
-  <!-- El bundle activa los componentes con atributos data-bs-*. -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
           crossorigin="anonymous"></script>
+  <script src="js/scrollcraft.js"></script>
+  <script src="js/escenas.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

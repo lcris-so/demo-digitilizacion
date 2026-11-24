@@ -1,36 +1,31 @@
-# Demo Proyecto
+# Netflix: del DVD al streaming
 
-Demo de tres páginas HTML5 para Interfaces DAM. Usa Bootstrap 5.3.9 por CDN y JavaScript sin dependencias adicionales.
+Web estática de cuatro páginas, hecha a partir del dossier de la Fase I de Digitalización (2º DAM Tarde) de Luis Cristian Sanchez Oliva. Usa Bootstrap 5.3.9 por CDN para la rejilla y el menú móvil, una hoja de estilos propia con tema oscuro y el motor de scroll Scrollcraft (licencia MIT) en Inicio y Evolución.
 
 ## Estructura
 
 ```text
-estudio-norte/
-├── index.html
-├── servicios.html
-├── contacto.html
+├── index.html       Inicio: el sobre rojo se abre al hacer scroll, cifras, accesos y dato curioso
+├── empresa.html     Ficha: identidad e historia, organización y presencia geográfica
+├── evolucion.html   Antes y después fijado en pantalla y línea temporal horizontal de 7 hitos
+├── recursos.html    Vídeo oficial, galería, registro de fuentes y conclusión
 ├── css/
-│   └── style.css
+│   ├── style.css        Estilos comunes del sitio
+│   ├── escenas.css      Escenas de scroll de Inicio y Evolución
+│   └── scrollcraft.css  Motor Scrollcraft (tercero, sin modificar)
 ├── js/
-│   └── script.js
-├── img/
-│   └── estudio-demo.jpg
-└── README.md
+│   ├── main.js          Apariciones al hacer scroll y contadores
+│   ├── escenas.js       Arranque del motor, disco de la línea temporal y saltos entre hitos
+│   ├── scrollcraft.js   Motor Scrollcraft (tercero, sin modificar)
+│   └── LICENSE-scrollcraft.txt
+└── img/             Figuras de la sala de prensa oficial de Netflix
 ```
 
-## Cómo abrir la demo
+## Cómo abrirla
 
-1. Descomprime el ZIP conservando las carpetas.
-2. Abre `index.html` en el navegador. También puedes abrir la carpeta en VS Code y usar Live Server si ya lo tienes instalado.
-3. Mantén la conexión a Internet para que el navegador cargue Bootstrap desde jsDelivr.
-4. Reduce el ancho de la ventana para probar el menú móvil. En Servicios puedes desplegar los paneles del acordeón.
-5. En Contacto, prueba primero un correo sin arroba y luego un correo válido. Con todos los datos válidos, aparece una confirmación del envío simulado.
+Abre `index.html` en el navegador o usa Live Server en VS Code. Necesita conexión a Internet para cargar Bootstrap desde jsDelivr.
 
-## Dónde personalizar
+## Personalizar
 
-- Edita los tres HTML para cambiar los textos. Si modificas el menú o el pie, aplica el cambio en cada HTML. Mantén `aria-current="page"` en el enlace de la página correspondiente.
-- En `css/style.css`, cambia las variables de `:root` para ajustar la paleta. Las clases de Bootstrap controlan la cuadrícula y el menú adaptable.
-- Sustituye `img/estudio-demo.jpg` o modifica el atributo `src` en `index.html`. Actualiza el texto alternativo y las dimensiones declaradas según la nueva imagen.
-- `js/script.js` se carga en Contacto y simula el envío en el navegador. El proyecto funciona como sitio estático y carece de un servicio de recepción de mensajes.
-
-[Documentación oficial de Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/download/) · [Fotografía de demostración en Unsplash](https://images.unsplash.com/photo-1497366754035-f200968a6e72)
+- Colores: variables de `:root` en `css/style.css` y tokens `--sc-*` en `css/escenas.css`.
+- El menú y el pie se repiten en los cuatro HTML; si cambias uno, cambia los demás y mantén `aria-current="page"` en la página actual.
