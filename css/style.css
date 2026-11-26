@@ -927,3 +927,57 @@ html:not(.js) .barra-fill,
   border: 1px solid var(--borde);
   background: #000;
 }
+
+.diagrama-servidores {
+  max-width: 60rem;
+}
+
+.diagrama-servidores img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--borde);
+  border-radius: .9rem;
+}
+
+.diagrama-servidores figcaption {
+  margin-top: .6rem;
+  color: var(--texto-suave);
+  font-size: .82rem;
+}
+
+.diagrama-servidores figcaption strong {
+  color: var(--rojo);
+}
+
+.pasos-servidor {
+  counter-reset: paso;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .75rem;
+}
+
+.pasos-servidor li {
+  counter-increment: paso;
+  position: relative;
+  padding-left: 2.6rem;
+  line-height: 1.5;
+}
+
+.pasos-servidor li::before {
+  content: counter(paso);
+  position: absolute;
+  left: 0;
+  top: -.05rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--rojo);
+  color: #fff;
+  font-weight: 700;
+  font-size: .9rem;
+}

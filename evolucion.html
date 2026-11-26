@@ -219,6 +219,43 @@
       </div>
     </section>
 
+    <section class="section-space section-alt" id="servidores" aria-labelledby="titulo-servidores">
+      <div class="container">
+        <h2 id="titulo-servidores" class="section-title reveal">Cómo funcionan los servidores</h2>
+        <p class="texto-suave mb-4 reveal">Los servidores de Open Connect (OCA) guardan copias de las series y películas cerca de donde vive la gente, dentro de los proveedores de Internet. Esto es lo que pasa cuando le das a «Play»:</p>
+        <figure class="figura-centrada diagrama-servidores reveal zoom mb-4">
+          <img src="img/servidores-play.svg" width="960" height="540" alt="Diagrama en 6 pasos: los servidores OCA informan a Netflix de su estado; pulsas Play; Netflix comprueba tu cuenta y elige los archivos; elige el servidor más cercano y te envía su dirección; tu app pide el vídeo a ese servidor; y el servidor te lo envía.">
+          <figcaption><strong>Fig. 18.</strong> Qué pasa al pulsar «Play». Elaboración propia a partir de Netflix, Open Connect Overview.</figcaption>
+        </figure>
+        <div class="row g-4">
+          <div class="col-lg-7 reveal izq">
+            <ol class="pasos-servidor">
+              <li>Los servidores informan cada poco a Netflix de si funcionan bien y de qué títulos tienen guardados.</li>
+              <li>Desde la app, pides ver una película.</li>
+              <li>Netflix, en la nube de Amazon (AWS), comprueba tu cuenta y la licencia, y elige los archivos según tu dispositivo y tu conexión.</li>
+              <li>Elige el servidor más cercano que tenga esa película y le pasa su dirección a tu app.</li>
+              <li>Tu dispositivo le pide el vídeo a ese servidor.</li>
+              <li>El servidor te envía el vídeo directamente.</li>
+            </ol>
+          </div>
+          <div class="col-lg-5 reveal der">
+            <ul class="chips">
+              <li>Hasta <strong>120 TB</strong> por servidor</li>
+              <li>Unos <strong>200 Gbps</strong> de salida</li>
+              <li><strong>FreeBSD</strong> y <strong>NGINX</strong></li>
+              <li><strong>Gratis</strong> para los proveedores</li>
+              <li><strong>0</strong> datos de usuarios guardados</li>
+            </ul>
+            <aside class="dato-curioso mt-4" aria-labelledby="titulo-curioso-servidores">
+              <h3 id="titulo-curioso-servidores">Dato curioso</h3>
+              <p>Netflix sabe con mucha precisión qué se va a ver y a qué hora, así que copia las series nuevas en los servidores por la noche, cuando Internet está menos saturado.</p>
+            </aside>
+            <p class="hito-fuente mt-3 mb-0"><b>Fuentes:</b> <a href="https://openconnect.netflix.com/Open-Connect-Overview.pdf" target="_blank" rel="noopener">Netflix: Open Connect Overview</a> · <a href="https://openconnect.netflix.com/en/appliances/" target="_blank" rel="noopener">Netflix: Open Connect Appliances</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section-space" aria-labelledby="titulo-siguiente">
       <div class="container">
         <aside class="dato-curioso mb-5 reveal zoom" aria-labelledby="titulo-curioso-hito">
