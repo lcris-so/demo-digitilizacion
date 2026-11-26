@@ -920,3 +920,10 @@ html:not(.js) .barra-fill,
 .js .reveal.listo {
   transition: transform .35s var(--ease), border-color .35s ease, box-shadow .35s ease;
 }
+
+.video-embed {
+  overflow: hidden;
+  border-radius: .7rem;
+  border: 1px solid var(--borde);
+  background: #000;
+}
