@@ -29,7 +29,3 @@ Abre `index.html` en el navegador o usa Live Server en VS Code. Necesita conexi�
 
 - Colores: variables de `:root` en `css/style.css` y tokens `--sc-*` en `css/escenas.css`.
 - El menú y el pie se repiten en los cuatro HTML; si cambias uno, cambia los demás y mantén `aria-current="page"` en la página actual.
-
-## Autor
-
-Luis Cristian Sanchez Oliva ([@lcris-so](https://github.com/lcris-so)).
